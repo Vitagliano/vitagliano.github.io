@@ -5,12 +5,26 @@
     padding: 0;
     box-sizing: border-box;
     outline: none !important;
+    scroll-behavior: smooth;
+
+}
+
+::selection {
+    background: rgba(86, 117, 255, 0.4);
+}
+
+::-moz-selection {
+    background: rgba(86, 117, 255, 0.4);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     background: #ffffff !important;
     font-family: 'Poppins', sans-serif !important;
-    color: #171717 !important;
+    color: #171717;
 }
 
 /* width */
@@ -61,6 +75,12 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 40px 0px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 header .brand h3 a {
@@ -77,6 +97,10 @@ header nav {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.navicon-button {
+    display: none;
 }
 
 header nav ul {
@@ -108,6 +132,7 @@ header nav ul li a:hover {
     height: 450px;
     overflow: hidden;
     border-radius: 15px;
+    transform-style: preserve-3d;
 }
 
 .intro .avatar img {
@@ -161,6 +186,12 @@ header nav ul li a:hover {
 
 .intro .cv {
     margin: 25px 0px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .intro .cv a {
@@ -183,10 +214,6 @@ header nav ul li a:hover {
 
 .intro .cv a:hover {
     background-color: #3c59da;
-}
-
-.proccess {
-    height: 50vh;
 }
 
 .proccess .card {
@@ -305,6 +332,12 @@ header nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .projects .projects-info a {
@@ -386,14 +419,12 @@ header nav ul li a:hover {
 
 .projects .projects-container .card .project-info .type {
     font-size: 16px;
-    text-shadow: 0 2px 0px rgba(0, 0, 0, 0.25);
     font-weight: 300;
 }
 
 .projects .projects-container .card .project-info .name a {
     text-decoration: none;
     font-size: 36px;
-    text-shadow: 0 2px 0px rgba(0, 0, 0, 0.25);
     font-weight: 800;
     color: #fff;
 }
@@ -414,7 +445,7 @@ header nav ul li a:hover {
 }
 
 .work-together .card .text {
-    width: 62.5%;
+    width: 58.5%;
 }
 
 .work-together .card .contact {
@@ -437,6 +468,12 @@ header nav ul li a:hover {
     -ms-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .work-together .card .contact a:hover {
@@ -456,6 +493,12 @@ footer .container {
 footer h3 {
     color: #fff;
     font-weight: 900;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 footer ul {
@@ -489,4 +532,171 @@ footer span {
     color: #fff;
     font-weight: 400;
     font-size: 14px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@media (max-width: 768px) {
+
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    nav .brand h3 {
+        margin-bottom: 0;
+    }
+
+    .navicon-button {
+        display: unset;
+        margin-right: 10px;
+        transition: 0.25s;
+        cursor: pointer;
+        user-select: none;
+        opacity: .8;
+        border: 0;
+        background-color: transparent;
+    }
+
+    .navicon-button .navicon:before,
+    .navicon-button .navicon:after {
+        transition: 0.25s;
+    }
+
+    .navicon-button:hover {
+        transition: 0.5s;
+        opacity: 1;
+    }
+
+    .navicon-button:hover .navicon:before,
+    .navicon-button:hover .navicon:after {
+        transition: 0.25s;
+    }
+
+    .navicon-button:hover .navicon:before {
+        top: .825rem;
+    }
+
+    .navicon-button:hover .navicon:after {
+        top: -.825rem;
+    }
+
+    .navicon {
+        position: relative;
+        width: 2.5rem;
+        height: .3125rem;
+        background: #000;
+        transition: 0.5s;
+        border-radius: 2.5rem;
+    }
+
+    .navicon:before,
+    .navicon:after {
+        display: block;
+        content: "";
+        height: .3125rem;
+        width: 2.5rem;
+        background: #000 !important;
+        position: absolute;
+        z-index: -1;
+        transition: 0.5s 0.25s;
+        border-radius: 1rem;
+    }
+
+    .navicon:before {
+        top: .825rem;
+    }
+
+    .navicon:after {
+        top: -.825rem;
+    }
+
+    .open:not(.steps) .navicon:before,
+    .open:not(.steps) .navicon:after {
+        top: 0 !important;
+    }
+
+    .open .navicon:before,
+    .open .navicon:after {
+        transition: 0.5s;
+    }
+
+    .open.x .navicon {
+        background: transparent;
+    }
+
+    .open.x .navicon:before {
+        transform: rotate(-45deg);
+    }
+
+    .open.x .navicon:after {
+        transform: rotate(45deg);
+    }
+
+    header nav ul {
+        background-color: rgba(255, 255, 255, 0.486);
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        margin: 0px;
+    }
+
+    header nav ul li a {
+        font-size: 17px;
+    }
+
+    .intro .avatar {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .intro .info {
+        margin-left: 0;
+    }
+
+    .proccess .card {
+        margin-bottom: 25px;
+    }
+
+    .projects .projects-info {
+        display: inline;
+    }
+
+    .projects-info .see-more {
+        justify-content: start;
+    }
+
+    .work-together .card {
+        flex-direction: column;
+    }
+
+    .work-together .card .text {
+        width: 100%;
+    }
+
+    .work-together .card p {
+        margin-top: 10px;
+    }
+
+    .work-together .card .contact {
+        text-align: unset;
+        width: 100%;
+        margin: 25px 0px;
+    }
+
+    footer .container {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    footer .container ul {
+        display: flex;
+        margin: 10px 0px;
+    }
 }

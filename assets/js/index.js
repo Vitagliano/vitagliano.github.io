@@ -1,4 +1,17 @@
+
+
+
 $(() => {
+    $('#avatar').tilt({
+        perspective: 600,
+        scale: 1
+    })
+
+    animate();
+
+    $("button.x").click(function () {
+        $(this).toggleClass("open");
+    })
 
     // Fields
     let outer = $('.wrapper'),
@@ -42,3 +55,4 @@ $(() => {
     });
 
 });
+

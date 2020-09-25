@@ -14,28 +14,51 @@
     <div class="wrapper">
         <div class="bg"></div>
 
-        <div class="container">
-            <header>
+        <header id="home">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="brand">
+                        <h3><a href="/">gabrielrusso.me</a></h3>
+                    </div>
+                    <button class="navicon-button x" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="navicon"></div>
+                    </button>
 
-                <div class="brand">
-                    <h3><a href="/">gabrielrusso.me</a></h3>
-                </div>
-                <nav>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#projects">Projetos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#contact">Contato</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <!-- <nav>
                     <ul>
                         <li><a href="">Inicio</a></li>
                         <li><a href="">Projetos</a></li>
                         <li><a href="">Contato</a></li>
                     </ul>
-                </nav>
-            </header>
-        </div>
+                </nav> -->
+        </header>
 
         <section class="intro">
             <div class="container">
                 <div class="row">
                     <div class="col-md-5">
-                        <div class="avatar">
-                            <img src="assets/img/gabrielrusso.jpg" alt="Gabriel Russo Vitagliano">
+                        <div class="avatar" id="avatar">
+                            <img draggable="false" src="assets/img/gabrielrusso.jpg" alt="Gabriel Russo Vitagliano">
                         </div>
                     </div>
                     <div class="col-md-7">
@@ -46,7 +69,7 @@
                             <div class="bio">
                                 <p><b>✍</b> Estudante de Tecnologia em Sistemas para Internet</p>
                                 <p><b>📅</b> 22 anos</p>
-                                <p><b>🗺</b> São João da Boa Vista/SP - Brasil</p>
+                                <p><b>🗺️</b> São João da Boa Vista/SP - Brasil</p>
                             </div>
 
                             <div class="cv">
@@ -59,49 +82,52 @@
         </section>
 
 
-        <!-- <section class="proccess">
+        <section class="proccess">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="card">
                             <div class="icon">
-                                <img src="http://templatekit.esensifiksi.com/agetha/wp-content/uploads/sites/4/2020/06/Clipboard-Writing.png" />
+                                <img draggable="false"
+                                    src="https://img.icons8.com/pastel-glyph/64/ffffff/create-new--v3.png" />
                             </div>
                             <h2>
-                                UI Design
+                                Planejamento
                             </h2>
-                            <p>Lorem Ipsum is simply text of the printing type.</p>
+                            <p>Aqui todas as ideias são expostas e o planejamento de todo o processo se inicia.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
                             <div class="icon">
-                                <img src="http://templatekit.esensifiksi.com/agetha/wp-content/uploads/sites/4/2020/06/Clipboard-Writing.png" />
+                                <img draggable="false"
+                                    src="https://img.icons8.com/pastel-glyph/64/ffffff/shpatel.png" />
                             </div>
                             <h2>
-                                UI Design
+                                Design
                             </h2>
-                            <p>Lorem Ipsum is simply text of the printing type.</p>
+                            <p>É a hora de transformar ideias em algo visual e interativo.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card">
                             <div class="icon">
-                                <img src="http://templatekit.esensifiksi.com/agetha/wp-content/uploads/sites/4/2020/06/Clipboard-Writing.png" />
+                                <img draggable="false"
+                                    src="https://img.icons8.com/pastel-glyph/64/ffffff/source-code--v1.png" />
                             </div>
                             <h2>
-                                UI Design
+                                Programação
                             </h2>
-                            <p>Lorem Ipsum is simply text of the printing type.</p>
+                            <p>A mão na massa, envolvendo todo o sistema por trás do site.</p>
                         </div>
                     </div>
 
                 </div>
             </div>
-        </section> -->
+        </section>
 
         <!-- <section class="numbers">
-            
+
             <div class="container">
                 <div class="row">
                     <div class="col-md-5 middle">
@@ -142,12 +168,12 @@
             </div>
         </section> -->
 
-        <section class="projects">
+        <section class="projects" id="projects">
             <div class="container">
                 <div class="projects-info">
                     <div class="text">
                         <h3>Projetos</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing eli</p>
+                        <p>Esses são meus projetos mais recentes</p>
                     </div>
 
                     <div class="see-more">
@@ -215,17 +241,16 @@
             </div>
         </section>
 
-        <section class="work-together">
+        <section class="work-together" id="contact">
             <div class="container">
                 <div class="card">
                     <div class="text">
-                        <h1>Vamos trabalhar juntos <br>no seu próximo projeto</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore </p>
+                        <h1>Vamos trabalhar juntos no seu próximo projeto</h1>
+                        <p>Manda uma mensagem e vamos transformar sua ideia em algo real! </p>
                     </div>
 
                     <div class="contact">
-                        <a href="">✉ Contato</a>
+                        <a href="">✉️ Contato</a>
 
                     </div>
                 </div>
@@ -239,13 +264,13 @@
 
                 <ul>
                     <li>
-                        <a href="">Inicio</a>
+                        <a href="#home">Inicio</a>
                     </li>
                     <li>
-                        <a href="">Projetos</a>
+                        <a href="#projects">Projetos</a>
                     </li>
                     <li>
-                        <a href="">Contato</a>
+                        <a href="#contact">Contato</a>
                     </li>
                 </ul>
 
@@ -255,6 +280,7 @@
 
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/gijsroge/tilt.js/38991dd7/dest/tilt.jquery.js"></script>
     <script src="assets/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
