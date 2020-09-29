@@ -82,7 +82,7 @@
         </section>
 
 
-        <section class="proccess">
+        <section class="proccess" style="margin-top: 120px;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
@@ -144,8 +144,8 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="card">
-                                    <h2>60+</h2>
-                                    <p>Clientes</p>
+                                    <h2>1200+</h2>
+                                    <p>Copos de café</p>
                                 </div>
                             </div>
                         </div>
@@ -250,13 +250,119 @@
                     </div>
 
                     <div class="contact">
-                        <a href="">✉️ Contato</a>
+                        <!-- <a href="">✉️ Contato</a> -->
+
+
+                        <!-- Button trigger modal -->
+
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                            ✉️ Contato
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-fullscreen">
+                                <div class="modal-content">
+
+                                    <div class="modal-body">
+
+
+                                        <div class="form-wrapper">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                            <div class="row">
+                                                <div class="col-lg-5 col-md-12 order-lg-5 order-md-12">
+                                                    <div class="personal-details">
+                                                        <h3>Entre em contato</h3>
+                                                        <p>Quer saber mais sobre meu trabalho? Fale comigo!</p>
+                                                        <div class="person-info">
+
+                                                            <div class="one-info">
+                                                                <div class="info-icon">
+                                                                    <img draggable="false"
+                                                                        src="https://img.icons8.com/pastel-glyph/64/5272ff/map.png"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="info-text">
+                                                                    <h5>Localização</h5><span>São João da Boa Vista, São
+                                                                        Paulo/Brasil</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="one-info">
+                                                                <div class="info-icon">
+                                                                    <img draggable="false"
+                                                                        src="https://img.icons8.com/pastel-glyph/64/5272ff/filled-message.png"
+                                                                        alt="">
+                                                                    </i>
+                                                                </div>
+                                                                <div class="info-text">
+                                                                    <h5>E-mail</h5>
+                                                                    <span>gabrielrvita@gmail.com</span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="one-info">
+                                                                <div class="info-icon">
+                                                                    <img draggable="false"
+                                                                        src="https://img.icons8.com/pastel-glyph/64/5272ff/whatsapp--v2.png"
+                                                                        alt="">
+                                                                </div>
+                                                                <div class="info-text">
+                                                                    <h5>Whatsapp</h5><span>+55 15 99141-7589</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-7 col-md-12 order-lg-7 order-md-12">
+                                                    <div class="brief-form">
+                                                        <form method="post">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label for="briefDesc">Digite sua
+                                                                            mensagem</label>
+                                                                        <textarea class="form-control" id="briefDesc"
+                                                                            name="briefDesc"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="fullName">Nome completo</label>
+                                                                        <input class="form-control" id="fullName"
+                                                                            type="text" name="fullName">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label for="emailAddr">E-mail</label>
+                                                                        <input class="form-control" id="emailAddr"
+                                                                            type="email" name="emailAddr">
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-12">
+                                                                    <div class="form-button butts-style">
+                                                                        <button onclick="sendEmail()" class="bttn bttn-lg" id="contact-submit"
+                                                                            type="submit">Enviar mensagem</button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
 
                     </div>
                 </div>
             </div>
-
-
         </section>
         <footer>
             <div class="container">
@@ -277,8 +383,17 @@
                 <span>Criado com 🤍</span>
             </div>
         </footer>
-
     </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>Email.send({
+            SecureToken: "0e69c976-c36e-4636-897c-0255debd570d",
+            To: 'them@website.com',
+            From: "you@isp.com",
+            Subject: "This is the subject",
+            Body: "And this is the body"
+        }).then(
+            message => alert(message)
+        );</script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="assets/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
