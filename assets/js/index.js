@@ -3,6 +3,7 @@
 
 $(() => {
 
+
     $("button.x").click(function () {
         $(this).toggleClass("open");
     })
